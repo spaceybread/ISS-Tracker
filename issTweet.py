@@ -44,9 +44,9 @@ print(str(timezoneISS))
 localTime = datetime.now(pytz.timezone(timezoneISS))
 print('Local time: {}:{}'.format(localTime.hour,localTime.minute))
 if int(localTime.hour) <= 6 or int(localTime.hour) >= 19:
-    phrase = 'The ISS is cruising through the dark night! Currently flying over {} region ({}, {}) \nSweet Trails!'.format(timezoneISS, latt, long)
+    phrase = 'The ISS is cruising through the dark night! Currently flying over the {} timezone region ({}, {}) \nSweet Trails!'.format(timezoneISS, latt, long)
 else:
-    phrase = "The ISS is slicing through the bright, blue sky! Currently flying over {} region ({}, {}) \nHappy days!".format(timezoneISS, latt, long)
+    phrase = "The ISS is slicing through the bright, blue sky! Currently flying over the {} timezone region ({}, {}) \nHey there Mr. Blue!".format(timezoneISS, latt, long)
 
 api.update_status(status = phrase)
 print(phrase)
